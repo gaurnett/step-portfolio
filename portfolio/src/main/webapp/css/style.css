@@ -3,6 +3,7 @@
     src: url("../fonts/Selima\ .otf");
 }
 
+/* Header Section with navbar and image */
 #banner {
     height: 100vh;
     min-height: 500px;
@@ -34,12 +35,14 @@ nav a {
     color: #fff;
 }
 
+/* General Section Headers */
 .section-header {
     font-family: selima;
     font-size: 60px;
     margin: 24px;
 }
 
+/* Projects Section */
 .portfolio-img {
     overflow: hidden;
 }
