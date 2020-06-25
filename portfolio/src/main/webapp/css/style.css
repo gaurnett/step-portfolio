@@ -14,7 +14,7 @@ header {
 }
 
 #home-banner {
-    background-image: url("../img/STEP\ Portfolio\ Design.png");
+    background-image: url("../img/home.png");
 }
 
 #blog-banner {
@@ -24,6 +24,12 @@ header {
 #gallery-banner {
     background-image: url("../img/gallery.png");
 }
+
+#blog-drumming-banner {
+    background-image: url("../img/gallery/drum1.JPG");
+    height: 50vh;
+}
+
 .navbar {
     -webkit-transition: all 0.6s ease-out;
     -moz-transition: all 0.6s ease-out;
@@ -42,13 +48,26 @@ header {
     color: #000;
 }
 
+.navbar a i {
+    color: #fff;
+}
+
+.navbar.scrolled a i {
+    color: #000;
+}
+
+
 nav a {
+    color: #fff;
+}
+
+.text-white {
     color: #fff;
 }
 
 /* General Section Headers */
 section {
-    margin-bottom: 32px;
+    margin-bottom: 40px;
 }
 
 .section-header {
@@ -62,6 +81,13 @@ section {
     font-size: 42px;
     margin: 12px;
     color: #2196F3;
+}
+
+.yosemite-separator-heading {
+    font-family: selima;
+    font-size: 42px;
+    margin: 12px;
+    color: #000;
 }
 
 /* Home Page */
@@ -83,10 +109,10 @@ section {
 
 /* Yosemite Separator */
 #yosemite-separator {
-    height: 300px;
+    height: 400px;
     background-image: url("../img/gallery/yosemite4.jpg");
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    background-position: left;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -94,6 +120,12 @@ section {
 /* Fwego */
 .fwego-ios {
     padding: 50px;
+}
+
+/* Blog Page */
+.blog-img {
+    height: 500px;
+    object-fit: cover;
 }
 
 /* Gallery Page */

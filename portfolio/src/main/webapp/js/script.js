@@ -12,34 +12,29 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/*
+    Filters the gallery based on the tab clicked. filterGallery() adds or removes show-gallery-img class 
+    from each of the images in order to show or hide it.
+*/
 filterGallery('all');
 function filterGallery(galleryFilter) {
-    var documents, index;
-    documents = document.getElementsByClassName("gallery");
+    var documents = document.getElementsByClassName("gallery");
     
     if (galleryFilter == "all")
         galleryFilter = "";
     
-    for (index = 0; index < documents.length; index++) {
-        removeClassName(documents[index], "show-gallery-img");
+    for (var index = 0; index < documents.length; index++) {
+        documents[index].className = documents[index].className.replace("show-gallery-img", "");
         if (documents[index].className.includes(galleryFilter)) {
-            addClassName(documents[index], "show-gallery-img");
+            documents[index].className += " show-gallery-img"
         }
     }
 }
 
-function addClassName(element, className) {
-  element.className += " " + className;
-}
-
-function removeClassName(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+function truthLieClicked(truth) {
+    if (truth == "truth") {
+        alert("Truth!");
+    } else {
+        alert("Lie! Try again ...");
     }
-  }
-  element.className = arr1.join(" ");
 }
