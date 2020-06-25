@@ -4,15 +4,26 @@
 }
 
 /* Header Section with navbar and image */
-#banner {
+header {
     height: 100vh;
     min-height: 500px;
-    background-image: url("../img/STEP\ Portfolio\ Design.png");
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
+#home-banner {
+    background-image: url("../img/STEP\ Portfolio\ Design.png");
+}
+
+#blog-banner {
+    background-image: url("../img/blog.png");
+}   
+
+#gallery-banner {
+    background-image: url("../img/gallery.png");
+}
 .navbar {
     -webkit-transition: all 0.6s ease-out;
     -moz-transition: all 0.6s ease-out;
@@ -36,11 +47,24 @@ nav a {
 }
 
 /* General Section Headers */
+section {
+    margin-bottom: 32px;
+}
+
 .section-header {
     font-family: selima;
     font-size: 60px;
     margin: 24px;
 }
+
+.section-header-2 {
+    font-family: selima;
+    font-size: 42px;
+    margin: 12px;
+    color: #2196F3;
+}
+
+/* Home Page */
 
 /* Projects Section */
 .portfolio-img {
@@ -55,4 +79,39 @@ nav a {
 .portfolio-img:hover img {
     filter: brightness(100%);
     transform: scale(1.2);
+}
+
+/* Yosemite Separator */
+#yosemite-separator {
+    height: 300px;
+    background-image: url("../img/gallery/yosemite4.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Fwego */
+.fwego-ios {
+    padding: 50px;
+}
+
+/* Gallery Page */
+.btn {
+    margin-right: 8px;
+}
+
+.gallery {
+    float: left;
+    display: none;
+}
+
+.gallery-img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.show-gallery-img {
+    display: block;
 }
