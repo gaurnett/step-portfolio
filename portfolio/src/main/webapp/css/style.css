@@ -4,13 +4,30 @@
 }
 
 /* Header Section with navbar and image */
-#banner {
+header {
     height: 100vh;
     min-height: 500px;
-    background-image: url("../img/STEP\ Portfolio\ Design.png");
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#home-banner {
+    background-image: url("../img/home.png");
+}
+
+#blog-banner {
+    background-image: url("../img/blog.png");
+}   
+
+#gallery-banner {
+    background-image: url("../img/gallery.png");
+}
+
+#blog-drumming-banner {
+    background-image: url("../img/gallery/drum1.JPG");
+    height: 50vh;
 }
 
 .navbar {
@@ -31,16 +48,49 @@
     color: #000;
 }
 
+.navbar a i {
+    color: #fff;
+}
+
+.navbar.scrolled a i {
+    color: #000;
+}
+
+
 nav a {
     color: #fff;
 }
 
+.text-white {
+    color: #fff;
+}
+
 /* General Section Headers */
+section {
+    margin-bottom: 40px;
+}
+
 .section-header {
     font-family: selima;
     font-size: 60px;
     margin: 24px;
 }
+
+.section-header-2 {
+    font-family: selima;
+    font-size: 42px;
+    margin: 12px;
+    color: #2196F3;
+}
+
+.yosemite-separator-heading {
+    font-family: selima;
+    font-size: 42px;
+    margin: 12px;
+    color: #fff;
+}
+
+/* Home Page */
 
 /* Projects Section */
 .portfolio-img {
@@ -55,4 +105,45 @@ nav a {
 .portfolio-img:hover img {
     filter: brightness(100%);
     transform: scale(1.2);
+}
+
+/* Yosemite Separator */
+#yosemite-separator {
+    height: 400px;
+    background-image: url("../img/gallery/yosemite4.jpg");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Fwego */
+.fwego-ios {
+    padding: 50px;
+}
+
+/* Blog Page */
+.blog-img {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Gallery Page */
+.btn {
+    margin-right: 8px;
+}
+
+.gallery {
+    float: left;
+    display: none;
+}
+
+.gallery-img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.show-gallery-img {
+    display: block;
 }
