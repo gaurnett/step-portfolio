@@ -1,0 +1,26 @@
+{
+  "name": "step-portfolio",
+  "version": "1.0.0",
+  "description": "My STEP Portfolio Project",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pretty": "prettier --write \"./**/*.{js,css,html,java}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaurnett/step-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gaurnett/step-portfolio/issues"
+  },
+  "homepage": "https://github.com/gaurnett/step-portfolio#readme",
+  "dependencies": {
+    "prettier": "^2.0.5"
+  }
+}

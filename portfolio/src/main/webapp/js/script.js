@@ -16,25 +16,27 @@
     Filters the gallery based on the tab clicked. filterGallery() adds or removes show-gallery-img class 
     from each of the images in order to show or hide it.
 */
-filterGallery('all');
+filterGallery("all");
 function filterGallery(galleryFilter) {
-    var documents = document.getElementsByClassName("gallery");
-    
-    if (galleryFilter == "all")
-        galleryFilter = "";
-    
-    for (var index = 0; index < documents.length; index++) {
-        documents[index].className = documents[index].className.replace("show-gallery-img", "");
-        if (documents[index].className.includes(galleryFilter)) {
-            documents[index].className += " show-gallery-img"
-        }
+  let documents = document.getElementsByClassName("gallery");
+
+  if (galleryFilter == "all") galleryFilter = "";
+
+  for (let index = 0; index < documents.length; index++) {
+    documents[index].className = documents[index].className.replace(
+      "show-gallery-img",
+      ""
+    );
+    if (documents[index].className.includes(galleryFilter)) {
+      documents[index].className += " show-gallery-img";
     }
+  }
 }
 
 function truthLieClicked(truth) {
-    if (truth == "truth") {
-        alert("Truth!");
-    } else {
-        alert("Lie! Try again ...");
-    }
+  if (truth == "truth") {
+    alert("Truth!");
+  } else {
+    alert("Lie! Try again ...");
+  }
 }

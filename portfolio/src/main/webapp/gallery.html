@@ -1,182 +1,294 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>Gaurnett Flowers Portfolio</title>
     <link rel="stylesheet" href="./css/style.css" />
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-    <!-- jQuery Google Host -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
-
-<body>
+  <body>
     <!-- Navigation -->
-    <header id="gallery-banner">
-        <nav class="navbar navbar-expand-lg fixed-top py-3">
-            <div class="container">
-                <button type="button" data-toggle="collapse" data-target="#nav-items" aria-controls="nav-items"
-                    aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">
-                    <i class="fa fa-bars"></i>
-                </button>
-
-                <div id="nav-items" class="collapse navbar-collapse">
-                    <ul class="navbar-nav ml-auto mx-auto">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-text-scrolled nav-link text-uppercase font-weight-bold">Gaurnett Flowers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="blog.html" class="nav-text-scrolled nav-link text-uppercase font-weight-bold">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="gallery.html" class="nav-text-scrolled nav-link text-uppercase font-weight-bold">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a target="_blank" href="https://github.com/gaurnett" class="nav-text-scrolled nav-link"><i class="fa fa-github" style="font-size:24px"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a target="_blank" href="https://www.linkedin.com/in/gaurnett-flowers-9a5642154" class="nav-text-scrolled nav-link"><i class="fa fa-linkedin" style="font-size:24px"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <header id="gallery-banner"></header>
 
     <!-- Projects Section -->
     <section>
-        <div class="container">
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-1"></div>
-                <div class="col-10">
-                    <p>I really started photography when I got my first camera from my dad. He's a professional photographer in Jamaica and he always had camera lying around. There were other 
-                        times where I would get the old cameras whenever he bought new ones. My main subjects were bees, flowers and views of amazing sites across my country. When I moved to the 
-                        states for school my passion continued. I'd start to take photos of people and continue to snap photos of other views and animals I'd come across. I was always that annoying 
-                        friend who would ask to stop the car on roadtrips just to take a picture. I'm not the best but I still try to improve on every shot I take.
-                    </p>
-                </div>
-                <div class="col-1"></div>
-            </div>
-            <h2 class="section-header text-center">Photos</h2>
+      <div class="container">
+        <br />
+        <br />
+        <div class="row">
+          <div class="col-md-10 offset-1">
+            <p>
+              I really started photography when I got my first camera from my
+              dad. He's a professional photographer in Jamaica and he always had
+              camera lying around. There were other times where I would get the
+              old cameras whenever he bought new ones. My main subjects were
+              bees, flowers and views of amazing sites across my country. When I
+              moved to the states for school my passion continued. I'd start to
+              take photos of people and continue to snap photos of other views
+              and animals I'd come across. I was always that annoying friend who
+              would ask to stop the car on roadtrips just to take a picture. I'm
+              not the best but I still try to improve on every shot I take.
+            </p>
+          </div>
         </div>
+        <h2 class="section-header text-center">Photos</h2>
+      </div>
 
-        <div class="container text-center">
-            <button type="button" class="btn btn-primary" onclick="filterGallery('all')">All</button>
-            <button type="button" class="btn btn-info" onclick="filterGallery('me')">Myself</button>
-            <button type="button" class="btn btn-success" onclick="filterGallery('family')">Friends and Family</button>
-            <button type="button" class="btn btn-danger" onclick="filterGallery('california')">California</button>
-            <button type="button" class="btn btn-warning" onclick="filterGallery('nature')">Nature & Views</button>
+      <div class="container text-center">
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="filterGallery('all')"
+        >
+          All
+        </button>
+        <button
+          type="button"
+          class="btn btn-info"
+          onclick="filterGallery('me')"
+        >
+          Myself
+        </button>
+        <button
+          type="button"
+          class="btn btn-success"
+          onclick="filterGallery('family')"
+        >
+          Friends and Family
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          onclick="filterGallery('california')"
+        >
+          California
+        </button>
+        <button
+          type="button"
+          class="btn btn-warning"
+          onclick="filterGallery('nature')"
+        >
+          Nature & Views
+        </button>
+      </div>
+
+      <br />
+      <br />
+
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-md-4 gallery california">
+            <img
+              src="./img/gallery/yosemite.jpg"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery nature">
+            <img
+              src="./img/gallery/view.jpg"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery me">
+            <img
+              src="./img/gallery/drum1.JPG"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery nature">
+            <img
+              src="./img/gallery/view4.jpg"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery family">
+            <img
+              src="./img/gallery/vic1.jpg"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery family">
+            <img
+              src="./img/gallery/mom1.jpg"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery nature">
+            <img
+              src="./img/gallery/view2.jpg"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery family">
+            <img
+              src="./img/gallery/janvier.jpg"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery family">
+            <img
+              src="./img/gallery/luke.jpg"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery me">
+            <img
+              src="./img/gallery/me1.jpg"
+              class="gallery-img card-img-top galllery"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery family">
+            <img
+              src="./img/gallery/mom2.jpg"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery family">
+            <img
+              src="./img/gallery/charles.jpg"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery family">
+            <img
+              src="./img/gallery/sanfran2.jpg"
+              class="gallery-img card-img-top galllery"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery california">
+            <img
+              src="./img/gallery/sanfran1.JPG"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery california">
+            <img
+              src="./img/gallery/yosemite3.jpg"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery family">
+            <img
+              src="./img/gallery/wumni.jpg"
+              class="gallery-img card-img-top galllery"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery family">
+            <img
+              src="./img/gallery/praful.JPG"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery family">
+            <img
+              src="./img/gallery/dskull.jpg"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery me">
+            <img
+              src="./img/gallery/drum2.JPG"
+              class="gallery-img card-img-top galllery"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery me">
+            <img
+              src="./img/gallery/me2.jpg"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery family">
+            <img
+              src="./img/gallery/charles.jpg"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery california">
+            <img
+              src="./img/gallery/la.jpg"
+              class="gallery-img card-img-top galllery"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-4 gallery family">
+            <img
+              src="./img/gallery/papa.JPG"
+              class="gallery-img card-img-top"
+              alt="..."
+            />
+          </div>
         </div>
-
-        <br>
-        <br>
-
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-4 gallery california">
-                    <img src="./img/gallery/yosemite.jpg" class="gallery-img card-img-top" alt="..." />
-                </div>
-                <div class="col-4 gallery nature">
-                    <img src="./img/gallery/view.jpg" class="gallery-img card-img-top" alt="..." />
-                </div>
-                <div class="col-4 gallery me">
-                    <img src="./img/gallery/drum1.JPG" class="gallery-img card-img-top" alt="..." />
-                </div>
-                <div class="col-4 gallery nature">
-                    <img src="./img/gallery/view4.jpg" class="gallery-img card-img-top" alt="..." />
-                </div>
-                <div class="col-4 gallery family">
-                    <img src="./img/gallery/vic1.jpg" class="gallery-img card-img-top" alt="..." />
-                </div>
-                <div class="col-4 gallery family">
-                    <img src="./img/gallery/mom1.jpg" class="gallery-img card-img-top" alt="..." />
-                </div>
-                <div class="col-4 gallery nature">
-                    <img src="./img/gallery/view2.jpg" class="gallery-img card-img-top" alt="..." />
-                </div>
-                <div class="col-4 gallery family">
-                    <img src="./img/gallery/janvier.jpg" class="gallery-img card-img-top" alt="..." />
-                </div>
-                <div class="col-4 gallery family">
-                    <img src="./img/gallery/luke.jpg" class="gallery-img card-img-top" alt="..." />
-                </div>
-                <div class="col-4 gallery me">
-                    <img src="./img/gallery/me1.jpg" class="gallery-img card-img-top galllery" alt="..." />
-                </div>
-                <div class="col-4 gallery family">
-                    <img src="./img/gallery/mom2.jpg" class="gallery-img card-img-top" alt="..." />
-                </div>
-                <div class="col-4 gallery family">
-                    <img src="./img/gallery/charles.jpg" class="gallery-img card-img-top" alt="..." />
-                </div>
-                <div class="col-4 gallery family">
-                    <img src="./img/gallery/sanfran2.jpg" class="gallery-img card-img-top galllery" alt="..." />
-                </div>
-                <div class="col-4 gallery california">
-                    <img src="./img/gallery/sanfran1.JPG" class="gallery-img card-img-top" alt="..." />
-                </div>
-                <div class="col-4 gallery california">
-                    <img src="./img/gallery/yosemite3.jpg" class="gallery-img card-img-top" alt="..." />
-                </div>
-                <div class="col-4 gallery family">
-                    <img src="./img/gallery/wumni.jpg" class="gallery-img card-img-top galllery" alt="..." />
-                </div>
-                <div class="col-4 gallery family">
-                    <img src="./img/gallery/praful.JPG" class="gallery-img card-img-top" alt="..." />
-                </div>
-                <div class="col-4 gallery family">
-                    <img src="./img/gallery/dskull.jpg" class="gallery-img card-img-top" alt="..." />
-                </div>
-                <div class="col-4 gallery me">
-                    <img src="./img/gallery/drum2.JPG" class="gallery-img card-img-top galllery" alt="..." />
-                </div>
-                <div class="col-4 gallery me">
-                    <img src="./img/gallery/me2.jpg" class="gallery-img card-img-top" alt="..." />
-                </div>
-                <div class="col-4 gallery family">
-                    <img src="./img/gallery/charles.jpg" class="gallery-img card-img-top" alt="..." />
-                </div>
-                <div class="col-4 gallery california">
-                    <img src="./img/gallery/la.jpg" class="gallery-img card-img-top galllery" alt="..." />
-                </div>
-                <div class="col-4 gallery family">
-                    <img src="./img/gallery/papa.JPG" class="gallery-img card-img-top" alt="..." />
-                </div>
-            </div>
-            <br/>
-            <br/>
-        </div>
+        <br />
+        <br />
+      </div>
     </section>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery Google Host -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Custom JS Files -->
     <script src="./js/jquery.js"></script>
     <script src="./js/script.js"></script>
-</body>
-
+  </body>
 </html>
