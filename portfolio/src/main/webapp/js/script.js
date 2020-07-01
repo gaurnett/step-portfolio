@@ -22,15 +22,18 @@ function filterGallery(galleryFilter) {
         /*
             Hides all images before showing the filtered ones.
         */
-        documents[index].classList.remove("show-gallery-img");
+        documents[index].classList.remove('show-gallery-img');
 
         /*
             If the user clicks on a filter button, say california, it runs through all the images in the 
             documents array and if a document's class name includes the filter, it shows the image.
             If the all button is clicked, all images are shown
         */
-        if (galleryFilter == 'all' || documents[index].classList.contains(galleryFilter)) {
-            documents[index].classList.add("show-gallery-img");
+        if (
+            galleryFilter == 'all' ||
+            documents[index].classList.contains(galleryFilter)
+        ) {
+            documents[index].classList.add('show-gallery-img');
         }
     }
 }
@@ -53,7 +56,9 @@ function listComments() {
             comments.forEach((comment) => {
                 commentList.push(createCommentElement(comment));
             });
-            commentList.forEach(commentElement => commentListElement.appendChild(commentElement));
+            commentList.forEach((commentElement) =>
+                commentListElement.appendChild(commentElement)
+            );
         });
 }
 
