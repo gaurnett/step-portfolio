@@ -25,7 +25,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /** Servlet responsible for deleting tasks. */
-@WebServlet("/delete-comment")
+@WebServlet("/delete-task")
 public class DeleteTaskServlet extends HttpServlet {
 
   @Override
