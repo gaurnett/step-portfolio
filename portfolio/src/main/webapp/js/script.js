@@ -46,7 +46,6 @@ function listComments() {
     fetch('/list-comments')
         .then((response) => response.json())
         .then((comments) => {
-            console.log(comments);
             const commentListElement = document.getElementById('comments-list');
             comments.forEach((comment) => {
                 commentListElement.appendChild(createCommentElement(comment));
@@ -66,23 +65,23 @@ function createCommentElement(comment) {
     const projectElement = document.createElement('div');
     projectElement.classList.add('d-flex', 'w-100', 'justify-content-between');
 
-    const projectHeading = document.createElement('h5');
-    projectHeading.classList.add('mb-1');
-    projectHeading.innerHTML = comment.project;
+    const projectText = document.createElement('h5');
+    projectText.classList.add('mb-1');
+    projectText.innerHTML = comment.project;
 
     const date = new Date(comment.timestamp);
-    const timestamp = document.createElement('small');
-    timestamp.innerText = date.toLocaleDateString();
+    const dateText = document.createElement('small');
+    dateText.innerText = date.toLocaleDateString();
 
-    projectElement.appendChild(projectHeading);
-    projectElement.appendChild(timestamp);
+    projectElement.appendChild(projectText);
+    projectElement.appendChild(dateText);
 
-    const comment = document.createElement('p');
-    comment.classList.add('mb-1');
-    comment.innerText = comment.comment;
+    const commentText = document.createElement('p');
+    commentText.classList.add('mb-1');
+    commentText.innerText = comment.comment;
 
-    const name = document.createElement('small');
-    name.innerText = 'by ' + comment.name;
+    const nameText = document.createElement('small');
+    nameText.innerText = 'by ' + comment.name;
 
     const breakElement = document.createElement('br');
 
@@ -95,8 +94,8 @@ function createCommentElement(comment) {
     });
 
     commentElement.appendChild(projectElement);
-    commentElement.appendChild(comment);
-    commentElement.appendChild(name);
+    commentElement.appendChild(commentText);
+    commentElement.appendChild(nameText);
     commentElement.appendChild(breakElement);
     commentElement.appendChild(deleteButtonElement);
     return commentElement;
