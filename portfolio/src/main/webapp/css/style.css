@@ -1,6 +1,6 @@
 @font-face {
     font-family: selima;
-    src: url('../fonts/Selima\ .otf');
+    src: url("../fonts/Selima\ .otf");
 }
 
 /* Header Section with navbar and image */
@@ -11,27 +11,22 @@ header {
     background-position: left;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin-bottom: 40px;
 }
 
 #home-banner {
-    background-image: url('../img/home.png');
+    background-image: url("../img/home.png");
 }
 
 #blog-banner {
-    background-image: url('../img/blog.png');
-}
-
-#comments-banner {
-    background-image: url('../img/comments.png');
-}
+    background-image: url("../img/blog.png");
+}   
 
 #gallery-banner {
-    background-image: url('../img/gallery.png');
+    background-image: url("../img/gallery.png");
 }
 
 #blog-drumming-banner {
-    background-image: url('../img/gallery/drum1.JPG');
+    background-image: url("../img/gallery/drum1.JPG");
     height: 50vh;
 }
 
@@ -61,15 +56,12 @@ header {
     color: #000;
 }
 
+
 nav a {
     color: #fff;
 }
 
-.navbar a i {
-    font-size: 24px;
-}
-
-.dark-theme {
+.text-white {
     color: #fff;
 }
 
@@ -88,10 +80,10 @@ section {
     font-family: selima;
     font-size: 42px;
     margin: 12px;
-    color: #2196f3;
+    color: #2196F3;
 }
 
-.about-me-heading {
+.yosemite-separator-heading {
     font-family: selima;
     font-size: 42px;
     margin: 12px;
@@ -116,9 +108,9 @@ section {
 }
 
 /* Yosemite Separator */
-#about-me {
+#yosemite-separator {
     height: 400px;
-    background-image: url('../img/gallery/yosemite4.jpg');
+    background-image: url("../img/gallery/yosemite4.jpg");
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;

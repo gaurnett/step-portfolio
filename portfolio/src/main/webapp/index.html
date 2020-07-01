@@ -1,68 +1,226 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Gaurnett Flowers Portfolio</title>
-        <link rel="stylesheet" href="./css/style.css" />
 
-        <!-- Font Awesome Icons -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
+<head>
+    <meta charset="UTF-8" />
+    <title>Gaurnett Flowers Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css" />
 
-        <!--Import Google Icon Font-->
-        <link
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            rel="stylesheet"
-        />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <!-- Bootstrap CSS -->
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-            crossorigin="anonymous"
-        />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
 
-    <body>
-        <!-- Navigation -->
-        <header id="home-banner"></header>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Projects Section -->
-        <section id="projects"></section>
+    <!-- jQuery Google Host -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
 
-        <!-- About Me Section -->
-        <section id="about-me"></section>
+<body>
+    <!-- Navigation -->
+    <header id="home-banner">
+        <nav class="navbar navbar-expand-lg fixed-top py-3">
+            <div class="container">
+                <button type="button" data-toggle="collapse" data-target="#nav-items" aria-controls="nav-items"
+                    aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">
+                    <i class="fa fa-bars"></i>
+                </button>
 
-        <section id="fwego"></section>
+                <div id="nav-items" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto mx-auto">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-text-scrolled nav-link text-uppercase font-weight-bold">Gaurnett Flowers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-text-scrolled nav-link text-uppercase font-weight-bold">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="gallery.html" class="nav-text-scrolled nav-link text-uppercase font-weight-bold">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a target="_blank" href="https://github.com/gaurnett" class="nav-text-scrolled nav-link"><i class="fa fa-github" style="font-size:24px"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a target="_blank" href="https://www.linkedin.com/in/gaurnett-flowers-9a5642154" class="nav-text-scrolled nav-link"><i class="fa fa-linkedin" style="font-size:24px"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script
-            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-            crossorigin="anonymous"
-        ></script>
+    <!-- Projects Section -->
+    <section>
+        <div class="container text-center">
+            <h2 class="section-header">Projects</h2>
+        </div>
 
-        <!-- jQuery Google Host -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <a target="_blank" href="https://coloursjamaica.com/">
+                            <div class="portfolio-img">
+                                <img src="./img/coloursjamaica.png" class="card-img-top" alt="..." />
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Colours Jamaica Print</h5>
+                            <p class="card-text">
+                                Kushites Vegetable Cuisine serves a constantly changing menu that draws inspiration from flavours 
+                                found globally while staying true to its African/Jamaican roots. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <a target="_blank" href="http://www.aimeduservices.com/">
+                            <div class="portfolio-img">
+                                <img src="./img/aim.png" class="card-img-top" alt="..." />
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">AIM Educational Services</h5>
+                            <p class="card-text">
+                                AIM Educational Services provides undergraduate placement services 
+                                and standardized test prep to college-bound teens in the US, Canada and the Caribbean.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <a target="_blank" href="http://www.kushitescuisine.com/">
+                            <div class="portfolio-img">
+                                <img src="./img/kushites.png" class="card-img-top" alt="..." />
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Kushites Vegetable Cuisine</h5>
+                            <p class="card-text">
+                                Kushites Vegetable Cuisine serves a constantly changing menu that draws inspiration from flavours 
+                                found globally while staying true to its African/Jamaican roots. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <a target="_blank" href="http://amadeomedical.com/">
+                            <div class="portfolio-img">
+                                <img src="./img/amadeo.png" class="card-img-top" alt="..." />
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Amadeo Medical</h5>
+                            <p class="card-text">
+                                Nestled in the old capital of Spanish Town, Amadeo Medical is situated in a renovated Spanish Colonial Style. 
+                                Amadeo Medical is one of two premier private laparoscopic medical centres in Jamaica.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Custom JS Files -->
-        <script src="./js/jquery.js"></script>
-        <script src="./js/script.js"></script>
-    </body>
+    <section id="yosemite-separator">
+        <div class="container">
+            <br>
+            <br>
+            <div class="row text-white">
+                <div class="col-8">
+                    <h2 class="yosemite-separator-heading">About Me</h2>
+                    <p>Reggae has coursed through my veins from birth as my heart learned to beat to the sounds of Bob Marley and Chronixx. 
+                        Being a musician has not only connected me to my history, but has showed me how to be expressive, allowing me to speak 
+                        my own language through the strum of a string or the beat of drum. I was never a stranger to adventure, traveling to the 
+                        beautiful Blue Mountains or swimming in the clear waters of the Caribbean Sea was something I always enjoyed. My 
+                        socio-economic background has allowed me to have unique opinions on the matters that I may face. My opinions may be similar 
+                        or completely unorthodox, but this only makes my relationship with my peers more exciting. Interested in finding out more? 
+                        Reach out, I love lending a hand.
+                    </p>
+                </div>
+                <div class="col-4">
+                    <h2 class="yosemite-separator-heading">2 Truths & 1 Lie</h2>
+                    <p>I think we all know how this goes but two of the statements below are true and one is a lie. Take a guess ...</p>
+                    <a onclick="truthLieClicked('truth')">1. I was a pro gamer at one point in my life</a><br>
+                    <a onclick="truthLieClicked('truth')">2. I learnt to ride a bike and swim freshman year of college</a><br>
+                    <a onclick="truthLieClicked('lie')">3. I'm trilingual</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container text-center">
+            <h2 class="section-header">Personal Project: Fwego</h2>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <p>Easily discover popular local and international events right in the palm of your hand. With Fwego, there’s always something new to do - whether it’s a stage show, 
+                        party or a concert by your favourite artiste. Our interactive map allows you to visualize all the events that are going on around you and give you details about 
+                        each one. All this allows you to never have to worry about where an event is being kept or how to get there.</p>
+                </div>
+                <div class="col-2"></div>
+            </div>
+           
+        </div>
+
+        <div class="container text-center">
+            <h2 class="section-header-2">iOS App and Website</h2>
+            <div class="row no-gutters">
+                <div class="col-4">
+                    <img src="./img/home/fwego-ios1.png" class="card-img-top fwego-ios" alt="..." />
+                </div>
+                <div class="col-4">
+                    <img src="./img/home/fwego-ios2.png" class="card-img-top fwego-ios" alt="..." />
+                </div>
+                <div class="col-4">
+                    <img src="./img/home/fwego-ios3.png" class="card-img-top fwego-ios" alt="..." />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <a target="_blank" href="https://coloursjamaica.com/">
+                            <div class="portfolio-img">
+                                <img src="./img/home/fwego-react.png" class="card-img-top" alt="..." />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+    </section>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom JS Files -->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
 </html>
