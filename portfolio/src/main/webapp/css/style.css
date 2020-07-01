@@ -1,152 +1,157 @@
 @font-face {
-  font-family: selima;
-  src: url("../fonts/Selima\ .otf");
+    font-family: selima;
+    src: url('../fonts/Selima\ .otf');
 }
 
 /* Header Section with navbar and image */
 header {
-  height: 100vh;
-  min-height: 500px;
-  background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+    height: 100vh;
+    min-height: 500px;
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-bottom: 40px;
 }
 
 #home-banner {
-  background-image: url("../img/home.png");
+    background-image: url('../img/home.png');
 }
 
 #blog-banner {
-  background-image: url("../img/blog.png");
+    background-image: url('../img/blog.png');
+}
+
+#comments-banner {
+    background-image: url('../img/comments.png');
 }
 
 #gallery-banner {
-  background-image: url("../img/gallery.png");
+    background-image: url('../img/gallery.png');
 }
 
 #blog-drumming-banner {
-  background-image: url("../img/gallery/drum1.JPG");
-  height: 50vh;
+    background-image: url('../img/gallery/drum1.JPG');
+    height: 50vh;
 }
 
 .navbar {
-  -webkit-transition: all 0.6s ease-out;
-  -moz-transition: all 0.6s ease-out;
-  -o-transition: all 0.6s ease-out;
-  -ms-transition: all 0.6s ease-out;
-  transition: all 0.6s ease-out;
-  background: transparent;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+    background: transparent;
 }
 
 .navbar.scrolled {
-  background: #fff;
-  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar.scrolled a {
-  color: #000;
+    color: #000;
 }
 
 .navbar a i {
-  color: #fff;
+    color: #fff;
 }
 
 .navbar.scrolled a i {
-  color: #000;
+    color: #000;
 }
 
 nav a {
-  color: #fff;
+    color: #fff;
 }
 
 .navbar a i {
-  font-size: 24px;
+    font-size: 24px;
 }
 
 .dark-theme {
-  color: #fff;
+    color: #fff;
 }
 
 /* General Section Headers */
 section {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .section-header {
-  font-family: selima;
-  font-size: 60px;
-  margin: 24px;
+    font-family: selima;
+    font-size: 60px;
+    margin: 24px;
 }
 
 .section-header-2 {
-  font-family: selima;
-  font-size: 42px;
-  margin: 12px;
-  color: #2196f3;
+    font-family: selima;
+    font-size: 42px;
+    margin: 12px;
+    color: #2196f3;
 }
 
 .about-me-heading {
-  font-family: selima;
-  font-size: 42px;
-  margin: 12px;
-  color: #fff;
+    font-family: selima;
+    font-size: 42px;
+    margin: 12px;
+    color: #fff;
 }
 
 /* Home Page */
 
 /* Projects Section */
 .portfolio-img {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .portfolio-img img {
-  transform-origin: 50% 65%;
-  transition: transform 2s, filter 1s ease-in-out;
+    transform-origin: 50% 65%;
+    transition: transform 2s, filter 1s ease-in-out;
 }
 
 .portfolio-img:hover img {
-  filter: brightness(100%);
-  transform: scale(1.2);
+    filter: brightness(100%);
+    transform: scale(1.2);
 }
 
 /* Yosemite Separator */
 #about-me {
-  height: 400px;
-  background-image: url("../img/gallery/yosemite4.jpg");
-  background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+    height: 400px;
+    background-image: url('../img/gallery/yosemite4.jpg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* Fwego */
 .fwego-ios {
-  padding: 50px;
+    padding: 50px;
 }
 
 /* Blog Page */
 .blog-img {
-  height: 500px;
-  object-fit: cover;
+    height: 500px;
+    object-fit: cover;
 }
 
 /* Gallery Page */
 .btn {
-  margin-right: 8px;
+    margin-right: 8px;
 }
 
 .gallery {
-  float: left;
-  display: none;
+    float: left;
+    display: none;
 }
 
 .gallery-img {
-  width: 400px;
-  height: 300px;
-  object-fit: cover;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .show-gallery-img {
-  display: block;
+    display: block;
 }

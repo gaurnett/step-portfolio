@@ -29,37 +29,59 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
 
-    <body>
+    <body onload="listComments()">
         <!-- Navigation -->
-        <header id="blog-banner"></header>
+        <header id="comments-banner"></header>
 
         <!-- Projects Section -->
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-10 offset-1">
-                        <div class="card">
-                            <a href="blog-drumming.html">
-                                <div class="portfolio-img">
-                                    <img
-                                        src="./img/gallery/drum1.JPG"
-                                        class="card-img-top blog-img"
-                                        alt="..."
-                                    />
-                                </div>
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title">Drumming</h5>
-                                <p class="card-text">
-                                    My hidden Talent: Bam! Bam! Bam! Budum! was
-                                    the sound that I often heard encapsulating
-                                    my school community in the fifth grade ...
-                                </p>
-                                <p class="card-text">
-                                    Date: Thursday, June 25, 2020
-                                </p>
-                            </div>
+                    <div class="col-md-6">
+                        <div class="container text-center">
+                            <h2 class="section-header">Form</h2>
                         </div>
+                        <form method="POST" action="/new-comment">
+                            <div class="form-group">
+                                <label for="fullname">Full name</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="name"
+                                    placeholder="John Brown"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="project">Project Comment</label>
+                                <select
+                                    name="project"
+                                    class="form-control"
+                                    id="project"
+                                >
+                                    <option>Portfolio Design</option>
+                                    <option>Websites Built</option>
+                                    <option>Fwego App</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment">Comment</label>
+                                <textarea
+                                    name="comment"
+                                    class="form-control"
+                                    id="comment"
+                                    rows="3"
+                                ></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="container text-center">
+                            <h2 class="section-header">Comments</h2>
+                        </div>
+                        <div id="comments-list" class="list-group"></div>
                     </div>
                 </div>
             </div>
