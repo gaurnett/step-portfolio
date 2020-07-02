@@ -13,22 +13,27 @@
 // limitations under the License.
 
 /*
-    Filters the gallery based on the tab clicked. filterGallery() adds or removes show-gallery-img class 
-    from each of the images in order to show or hide it.
+    Filters the gallery based on the menu clicked by the user
 */
-filterGallery('all');
 function filterGallery(galleryFilter) {
     let documents = document.getElementsByClassName('gallery');
 
-    if (galleryFilter == 'all') galleryFilter = '';
-
     for (let index = 0; index < documents.length; index++) {
-        documents[index].className = documents[index].className.replace(
-            'show-gallery-img',
-            ''
-        );
-        if (documents[index].className.includes(galleryFilter)) {
-            documents[index].className += ' show-gallery-img';
+        /*
+            Hides all images before showing the filtered ones.
+        */
+        documents[index].classList.remove('show-gallery-img');
+
+        /*
+            If the user clicks on a filter button, say california, it runs through all the images in the 
+            documents array and if a document's class name includes the filter, it shows the image.
+            If the all button is clicked, all images are shown
+        */
+        if (
+            galleryFilter == 'all' ||
+            documents[index].classList.contains(galleryFilter)
+        ) {
+            documents[index].classList.add('show-gallery-img');
         }
     }
 }
@@ -47,9 +52,13 @@ function listComments() {
         .then((response) => response.json())
         .then((comments) => {
             const commentListElement = document.getElementById('comments-list');
+            const commentList = [];
             comments.forEach((comment) => {
-                commentListElement.appendChild(createCommentElement(comment));
+                commentList.push(createCommentElement(comment));
             });
+            commentList.forEach((commentElement) =>
+                commentListElement.appendChild(commentElement)
+            );
         });
 }
 
@@ -83,11 +92,8 @@ function createCommentElement(comment) {
     const nameText = document.createElement('small');
     nameText.innerText = 'by ' + comment.name;
 
-    const breakElement = document.createElement('br');
-
-    const deleteButtonElement = document.createElement('button');
-    deleteButtonElement.classList.add('btn', 'btn-danger');
-    deleteButtonElement.innerText = 'Delete';
+    const deleteButtonElement = document.createElement('i');
+    deleteButtonElement.classList.add('fa', 'fa-trash');
     deleteButtonElement.addEventListener('click', () => {
         deleteComment(comment);
         commentElement.remove();
@@ -96,7 +102,6 @@ function createCommentElement(comment) {
     commentElement.appendChild(projectElement);
     commentElement.appendChild(commentText);
     commentElement.appendChild(nameText);
-    commentElement.appendChild(breakElement);
     commentElement.appendChild(deleteButtonElement);
     return commentElement;
 }

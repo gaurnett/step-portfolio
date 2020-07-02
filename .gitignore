@@ -1,2 +1,13 @@
 target/
 .idea
+
+**/.DS_Store
+**/.classpath
+**/.factorypath
+**/.project
+**/.vscode/
+**/.settings/
+
+package-lock.json
+node_modules/
+walkthroughs/
