@@ -14,11 +14,16 @@
 
 $(function () {
     // Removes transparency from nav bar after scrolling down the page a bit
-    $(window).on("scroll", function () {
+    $(window).on('scroll', function () {
         if ($(window).scrollTop() > 10) {
-            $(".navbar").addClass("scrolled");
+            $('.navbar').addClass('scrolled');
         } else {
-            $(".navbar").removeClass("scrolled");
+            $('.navbar').removeClass('scrolled');
         }
     });
+
+    $('header').load('navbar.html');
+    $('#projects').load('projects.html');
+    $('#about-me').load('about-me.html');
+    $('#fwego').load('fwego.html');
 });
