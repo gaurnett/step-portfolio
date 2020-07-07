@@ -152,14 +152,28 @@ section {
     object-fit: cover;
 }
 
-.show-gallery-img {
-    display: block;
-}
-
 /* Comments Page */
 #comments-list i {
     display: block;
     margin-top: 12px;
     font-size: 24px;
     color: red;
+}
+
+#gSignInButton {
+    text-transform: none;
+}
+
+.gSignInButtonImage {
+    width: 20px;
+    margin-bottom: 3px;
+    margin-right: 5px;
+}
+
+.show-element {
+    display: block;
+}
+
+.hide-element {
+    display: none;
 }

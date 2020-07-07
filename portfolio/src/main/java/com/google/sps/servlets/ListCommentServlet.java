@@ -31,12 +31,14 @@ public class ListCommentServlet extends HttpServlet {
         List<Comment> tasks = new ArrayList<>();
         for (Entity entity : results.asIterable()) {
             long id = entity.getKey().getId();
-            String name = (String) entity.getProperty("name");
+            long timestamp = (long) entity.getProperty("timestamp");
+            String posterName = (String) entity.getProperty("posterName");
+            String posterEmail = (String) entity.getProperty("posterEmail");
+            String posterID = (String) entity.getProperty("posterID");
             String comment = (String) entity.getProperty("comment");
             String project = (String) entity.getProperty("project");
-            long timestamp = (long) entity.getProperty("timestamp");
 
-            Comment task = new Comment(id, name, project, comment, timestamp);
+            Comment task = new Comment(id, timestamp, posterName, posterEmail, posterID, project, comment);
             tasks.add(task);
         }
 
