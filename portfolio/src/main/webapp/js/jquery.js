@@ -26,4 +26,5 @@ $(function () {
     $('#projects').load('projects.html');
     $('#about-me').load('about-me.html');
     $('#fwego').load('fwego.html');
+    $('#places-visited').load('places.html');
 });
