@@ -12,6 +12,56 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+window.onload = function () {
+    getUser();
+};
+
+/** Gets the current user */
+function getUser() {
+    return fetch('/userapi')
+        .then((response) => response.json())
+        .then((user) => {
+            setUpNavBar(user);
+
+            // If we are on the comments page, set up the forms and load the comments
+            if (document.URL.includes("comments.html")) {
+                setUpForms(user);
+                listComments(user);
+            }
+        });
+}
+
+function setUpNavBar(user) {
+    let loginButton = document.getElementById('loginButton');
+    let nameElement = document.getElementById('nameElement');
+    let logoutButton = document.getElementById('logoutButton');
+
+    // Show/hide specific navbar buttons based on users being signed in out not
+    if (user.isUserSignedIn) {
+        nameElement.classList.remove('hide-element');
+        logoutButton.classList.remove('hide-element');
+        nameElement.firstElementChild.innerText = user.name;
+        logoutButton.firstElementChild.setAttribute('href', user.link);
+    } else {
+        loginButton.classList.remove('hide-element');
+        loginButton.firstElementChild.setAttribute('href', user.link);
+    }
+}
+
+function setUpForms(user) {
+    let formSection = document.getElementById('form-section');
+    let loginSection = document.getElementById('login-section');
+
+    // Show/hide the form and sign in button based on users being signed in out not
+    if (user.isUserSignedIn) {
+        formSection.classList.remove('hide-element');
+    } else {
+        let signInButton = document.getElementById('gSignInButton');
+        signInButton.setAttribute('href', user.link);
+        loginSection.classList.remove('hide-element');
+    }
+}
+
 /*
     Filters the gallery based on the menu clicked by the user
 */
@@ -22,7 +72,7 @@ function filterGallery(galleryFilter) {
         /*
             Hides all images before showing the filtered ones.
         */
-        documents[index].classList.remove('show-gallery-img');
+        documents[index].classList.remove('show-element');
 
         /*
             If the user clicks on a filter button, say california, it runs through all the images in the 
@@ -33,7 +83,7 @@ function filterGallery(galleryFilter) {
             galleryFilter == 'all' ||
             documents[index].classList.contains(galleryFilter)
         ) {
-            documents[index].classList.add('show-gallery-img');
+            documents[index].classList.add('show-element');
         }
     }
 }
@@ -47,14 +97,14 @@ function truthLieClicked(truth) {
 }
 
 /** Fetches the list of comments from the Servlet */
-function listComments() {
+function listComments(user) {
     fetch('/list-comments')
         .then((response) => response.json())
         .then((comments) => {
             const commentListElement = document.getElementById('comments-list');
             const commentList = [];
             comments.forEach((comment) => {
-                commentList.push(createCommentElement(comment));
+                commentList.push(createCommentElement(comment, user));
             });
             commentList.forEach((commentElement) =>
                 commentListElement.appendChild(commentElement)
@@ -63,7 +113,7 @@ function listComments() {
 }
 
 /** Creates an element that represents a comment, including its delete button. */
-function createCommentElement(comment) {
+function createCommentElement(comment, user) {
     const commentElement = document.createElement('li');
     commentElement.classList.add(
         'list-group-item',
@@ -90,19 +140,29 @@ function createCommentElement(comment) {
     commentText.innerText = comment.comment;
 
     const nameText = document.createElement('small');
-    nameText.innerText = 'by ' + comment.name;
+    nameText.innerText = 'by ' + comment.posterName;
 
+    const emailText = document.createElement('small');
+    emailText.innerText = ' : ' + comment.posterEmail;
+
+    const deleteButtonATag = document.createElement('a');
     const deleteButtonElement = document.createElement('i');
     deleteButtonElement.classList.add('fa', 'fa-trash');
-    deleteButtonElement.addEventListener('click', () => {
+    deleteButtonATag.appendChild(deleteButtonElement);
+    deleteButtonATag.addEventListener('click', () => {
         deleteComment(comment);
         commentElement.remove();
     });
 
+    if (!user.isUserSignedIn || comment.posterID != user.id) {
+        deleteButtonATag.classList.add('hide-element');
+    }
+
     commentElement.appendChild(projectElement);
     commentElement.appendChild(commentText);
     commentElement.appendChild(nameText);
-    commentElement.appendChild(deleteButtonElement);
+    commentElement.appendChild(emailText);
+    commentElement.appendChild(deleteButtonATag);
     return commentElement;
 }
 
