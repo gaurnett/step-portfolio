@@ -14,6 +14,7 @@
 
 window.onload = function () {
     getUser();
+    createMap();
 };
 
 /** Gets the current user */
@@ -24,7 +25,7 @@ function getUser() {
             setUpNavBar(user);
 
             // If we are on the comments page, set up the forms and load the comments
-            if (document.URL.includes("comments.html")) {
+            if (document.URL.includes('comments.html')) {
                 setUpForms(user);
                 listComments(user);
             }
@@ -48,6 +49,47 @@ function setUpNavBar(user) {
     }
 }
 
+/** Creates a map and adds it to the page. */
+function createMap() {
+    const map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 30, lng: -20 },
+        zoom: 2.5,
+    });
+
+    addLandmark(map, 37.7749, -122.4194, 'San Francisco', 'San Francisco');
+
+    addLandmark(map, 34.0522, -118.2437, 'Los Angeles', 'Los Angeles');
+
+    addLandmark(map, 43.6532, -79.3832, 'Toronto', 'Toronto');
+
+    addLandmark(map, 43.4643, -80.5204, 'Waterloo', 'Waterloo');
+
+    addLandmark(map, 24.4539, 54.3773, 'Abu Dhabi', 'Abu Dhabi');
+
+    addLandmark(map, 40.7128, -74.006, 'New York', 'New York');
+
+    addLandmark(map, 42.4072, -71.3824, 'Massachusetts', 'Massachusetts');
+
+    addLandmark(map, 18.1096, -77.2975, 'Jamaica', 'Jamaica');
+
+    addLandmark(map, 27.6648, -81.5158, 'Florida', 'Florida');
+}
+
+/** Adds a marker that shows an info window when clicked. */
+function addLandmark(map, lat, lng, title, description) {
+    const marker = new google.maps.Marker({
+        position: { lat: lat, lng: lng },
+        map: map,
+        title: title,
+    });
+
+    const infoWindow = new google.maps.InfoWindow({ content: description });
+    marker.addListener('click', () => {
+        infoWindow.open(map, marker);
+    });
+}
+
+/** Sets up the forms on the comments page. */
 function setUpForms(user) {
     let formSection = document.getElementById('form-section');
     let loginSection = document.getElementById('login-section');
