@@ -13,6 +13,7 @@
 // limitations under the License.
 
 window.onload = function () {
+    filterGallery('all');
     getUser();
     createMap();
 };
